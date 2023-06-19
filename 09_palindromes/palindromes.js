@@ -4,10 +4,7 @@ const palindromes = function (str) {
 
     let strFormatted = strLower.replace(/[,.! ]/g, "");
 
-    let reverseStr = '';
-    for(i = strFormatted.length -1; i>=0; i--){
-        reverseStr += strFormatted[i];
-    }
+    let reverseStr = strFormatted.split("").reverse().join("");//reverse is an array method
 
     if(strFormatted === reverseStr){
         return true;
